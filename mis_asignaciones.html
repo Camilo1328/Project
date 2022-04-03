@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/mis_asignaciones.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container-xl">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2><b>Mis Asignaciones</b></h2>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="#rechazedallservModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons"></i> <span>Rechazar Todo</span></a>
+                            <a href="#aceptallservModal" class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Aceptar Todo</span></a>							
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr class="action">
+                            <th>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="selectAll">
+                                    <label for="selectAll"></label>
+                                </span>
+                            </th>
+                            <th>Consecutivo</th>
+                            <th>Acciones</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                    <label for="checkbox1"></label>
+                                </span>
+                            </td>
+                            <td>0001</td>
+                        
+                            <td>
+                                <div class="group">
+                                    <a href="#aceptallservModal" data-toggle="modal"><input type="submit" class="btn btn-success" value="Aceptar"></a>
+                                    <a href="#rechazedallservModal" data-toggle="modal"><input type="submit" class="btn btn-danger" value="Rechazar"></a>
+                                    <a href="#newtransportModal" data-toggle="modal"><input type="submit" class="btn btn-primary" value="Consultar"></a>
+                                    <a href="#novedadservModal" data-toggle="modal"><input type="submit" class="btn btn-warning" value="Registrar Novedad"></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                    <label for="checkbox1"></label>
+                                </span>
+                            </td>
+                            <td>0001</td>
+                            <td>
+                                <div class="group">
+                                    <a href="#aceptallservModal" data-toggle="modal"><input type="submit" class="btn btn-success" value="Aceptar"></a>
+                                    <a href="#rechazedallservModal" data-toggle="modal"><input type="submit" class="btn btn-danger" value="Rechazar"></a>
+                                    <a href="#newtransportModal" data-toggle="modal"><input type="submit" class="btn btn-primary" value="Consultar"></a>
+                                    <a href="#novedadservModal" data-toggle="modal"><input type="submit" class="btn btn-warning" value="Registrar Novedad"></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="clearfix">
+                    <div class="hint-text">Mostrando <b>2</b> de <b>25</b> entradas</div>
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a href="#">Anterior</a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                        <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- Aceptar Todos los servicios Modal HTML -->
+    <div id="aceptallservModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">						
+                        <h4 class="modal-title">Aceptar</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">					
+                        <p>¿Esta seguro de aceptar los registros seleccionados?</p>
+                        <p class="text-warning"><small>Esta acción no se podra deshacer.</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                        <input type="submit" class="btn btn-success" value="Aceptar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Rechazar Todos los servicios Modal HTML -->
+    <div id="rechazedallservModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">						
+                        <h4 class="modal-title">Rechazar</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">					
+                        <p>¿Esta seguro de rechazar los registros seleccionados?</p>
+                        <p class="text-warning"><small>Esta acción no se podra deshacer.</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                        <input type="submit" class="btn btn-success" value="Aceptar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Registrar Novedad Modal HTML -->
+    <div id="novedadservModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">						
+                        <h4 class="modal-title">Novedad</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <label>Registre su Novedad</label>
+                            <textarea class="form-control" cols="45" rows="10" required></textarea>	
+                        <p class="text-warning"><small>Por favor revise los datos ingresados</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                        <input type="submit" class="btn btn-success" value="Guardar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+    
+    
+
+    <!-- Consulta de Transporte Modal HTML -->
+    
+    <div id="newtransportModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-inline">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Transporte No 0001 </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Tipo Documento</label>
+                            <select class="form-control" required>
+                                <option value="  ">Seleccione Opción</option>
+                                <option value="">CC</option>
+                                <option value="">TI</option>
+                                <option value="">RC</option>
+                                <option value="">PE</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Numero de Documento</label>
+                            <input type="number" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Seleccione Cliente</label>
+                            <select class="form-control" required>
+                                <option value="  ">Seleccione Cliente</option>
+                                <option value="">Camilo Stevan Gutierrez Galicia</option>
+                                <option value="">Pepito perez Perez</option>
+                                <option value="">Oracio Camargo</option>
+                                <option value="">Hernando Garica</option>
+                                <option value="">Florinda Ramirez</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Origen</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Destino</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Diagnostico Paciente</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha del Servicio</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="fomr-group">
+                            <label>Motivo de Consulta</label>
+                            <textarea class="form-control" cols="45" rows="10" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>El cliente es de Hemodialisis/Terapias</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Si
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                No
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>Asignar Transporte</label>
+                            <select class="form-control" required>
+                                <option value="  ">Seleccione Empleado</option>
+                                <option value="">Camilo Stevan Gutierrez Galicia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cerrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    
+</body>
+	
+</body>
+</html>

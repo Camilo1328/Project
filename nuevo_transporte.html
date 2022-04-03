@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUEVO TRANSPORTE</title>
+    <link rel="stylesheet" href="css/web.css">
+    <link rel="stylesheet" href="css/transporte.css">
+    <script src="https://kit.fontawesome.com/b117d61464.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <main class="principal">
+            <header>
+                <iframe class="iheader" src="web.html" frameborder="0"></iframe>
+            </header>
+            <main>
+                <fieldset>
+                    <legend class="title">Nuevo Transporte</legend>
+                    <form>
+                        <div class="fieldoc">
+                            <label><B>Tipo de Documento</B></label>
+                            <select>
+                                <option selected disabled>Seleccione</option>
+                                <option>CC</option>
+                                <option>TI</option>
+                                <option>RC</option>
+                                <option>PE</option>
+                                <option>PA</option>
+                            </select required>
+                        </div>
+                        <div class="cedula">
+                            <label><B>Cedula</B></label>
+                            <input type="number" name="Cedula" required autocomplete>
+                        </div>
+                        <div class="nombre">
+                            <label><B>Nombre Completo</B></label>
+                            <input type="text" name="Nombre" required autocomplete>
+                        </div>
+                        <div class="field">
+                            <label><B>Origen</B></label>
+                            <input type="text" name="Origen" required autocomplete>
+                        </div>
+                        <div class="field">
+                            <label><B>Destino</B></label>
+                            <input type="text" name="Destino" required autocomplete>
+                        </div>
+                        <div class="field">
+                            <label><B>Fecha del servicio</B></label>
+                            <input type="date" name="Fecha" required>
+                        </div>
+                        <div class="textbox">
+                            <label><B>Motivo de Consulta</B></label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="Tipo">
+                            <label><B>¿El paciente es de: Hemodialisis/Terapias?</B></label>
+                            <div><input type="radio" name="Tipo de paciente" required>Si</div>
+                            <div><input type="radio" name="Tipo de paciente" required>No</div>
+                        </div>
+                        <div class="textboxfirma">
+                            <label><B>Firma del Paciente</B></label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="button">
+                            <input type="button" class="button" value="Guardar">
+                        </div>
+                    </form>
+                </fieldset>
+            </main>
+    </main>
+</body>
+</html>
